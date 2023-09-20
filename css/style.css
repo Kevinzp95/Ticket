@@ -1,0 +1,51 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.form{
+	width: 400px;
+	border: 1px solid black;	
+}
+.form>div{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+.hide{
+	display: none!important;
+}
+.form .form__header{
+	text-align: center;
+	background: darkred;
+	color: white;
+	justify-content: center;
+}
+input[type='text']{
+	width: 250px;
+}
+#charge{
+	font-weight: 700;
+}
+input[type="button"]{
+	background: darkred;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+}
+.collectType{
+	margin-left: 5px ;
+}
+.form__debtorType{
+	border-top: 1px solid darkred;
+	width: 70%;
+	margin: auto;
+}
+input[name="debtorType"]{
+	margin-left: 5px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--  Алгоритм взаємодії з клієнтом наступний: 
+В налаштуваннях цієї програми необхідно вводити одну константу мінімальну заробітну плату, це десь на адміністративній частині сайту, що недоступна користувачу.
+Ось дещо структурований алгоритм взаємодії
+Оберіть характер стягнення:
+варіанти: 
+1. майнове                         2. немайнове
+1.1        Якщо майнове то: введіть суму боргу, яку необхідно стягнути,
+1.1.1     якщо 2% від суми боргу менше або дорівнює 10 мінімальним заробітним платам то розмір авансового внеску дорівнює 2% від суми, яку необхідно стягнути
+1.1.2     якщо 2% від суми боргу більше 10 мін. заробітних плат то сума авансового внеску дорівнює 10 мінімальним заробітним платам.
+ 
+2.1 Якщо немайнове, то питання: зазначте будь ласка стягувача із запропонованих варіантів 
+2.1.1     стягувачем є фізична особа (громадянин)  наслідок      розмір авансового внеску 1 мінімальна  заробітна плата програма розраховує
+2.1.2     Стягувачем є юридична особа (підприємство, установа, організація)  наслідок розмір авансового внеску 2 мінімальні заробітні плати  програма розраховує  -->
+</head>
+<body>
+	<div class="wrapper">
+		<div class="form">
+			<div class="form__header">Форма розрахунку платежу</div>
+			<div class="form__name">
+				<span>ПІБ:</span><input type="text" id="fio">
+			</div>
+			<div class="form__adress">
+				<span>ІНН:</span><input type="text" id="inn">
+			</div>
+			<div class="form__typeCollect">
+				<div>
+					<span>Майнове</span><input type="radio" checked name="collectType" id="property" class="collectType">
+				</div>
+				<div>
+					<span>Не майнове</span><input type="radio" name="collectType" id="currency" class="collectType">
+				</div>
+			</div>
+			<div class="form__debtorType hide">
+				<div><span>Фізична особа</span><input type="radio" name="debtorType" id="person"></div>
+				<div><span>Юридична особа</span><input type="radio" name="debtorType" id="company"></div>
+			</div>
+			<div class="form__debt">
+				<span>Сума:</span><input type="text" id="debt">
+			</div>
+			<div class="form__charge">
+				<span>Комісія:</span><div id="charge"></div>
+			</div>
+			<div class="form__footer">
+				<input type="button" value="Оформити платіж">
+				<a href="bill.html" id="bill" target="_blank"><input type="button" value="Сформувати квитанцію"></a>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
